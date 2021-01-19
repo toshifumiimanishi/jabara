@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/toshifumiimanishi/jabara/issues"
   },
-  "homepage": "https://github.com/toshifumiimanishi/jabara#readme"
+  "homepage": "https://github.com/toshifumiimanishi/jabara#readme",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
 }
