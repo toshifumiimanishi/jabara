@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/toshifumiimanishi/jabara#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
