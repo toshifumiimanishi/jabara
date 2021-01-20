@@ -2,8 +2,11 @@
   "name": "jabara",
   "version": "1.0.0",
   "description": "🐍 Jabara.js is the collapse JavaScript plugin.",
-  "main": "index.js",
+  "main": "dist/jabara.js",
+  "module": "dist/jabara.es.js",
+  "browser": "dist/jabara.js",
   "scripts": {
+    "build": "rollup -c",
     "lint": "eslint --fix 'src/**/*.ts'"
   },
   "repository": {
@@ -20,9 +23,16 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@rollup/plugin-typescript": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
+    "rollup": "^2.37.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.1.0",
     "typescript": "^4.1.3"
   }
 }
