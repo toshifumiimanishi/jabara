@@ -4,7 +4,7 @@
   "description": "🐍 Jabara.js is the collapse JavaScript plugin.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --fix 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/toshifumiimanishi/jabara#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
     "typescript": "^4.1.3"
   }
 }
