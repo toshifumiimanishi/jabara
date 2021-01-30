@@ -1,5 +1,5 @@
-import jabara from './jabara';
+import Jabara from './jabara';
 
 export default {
-  jabara,
+  init: Jabara,
 };

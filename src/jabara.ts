@@ -4,21 +4,21 @@ type Options = {
   easing?: string | undefined
 }
 
-
-const jabra: (options: Options) => void = ({ selector, speed = 1.5, easing = 'ease-out' }) => {
+const Jabra: (options: Options) => void = ({ selector, speed = 1.5, easing = 'ease-out' }) => {
   const elements = document.querySelectorAll(selector);
 
   if (elements.length) {
     [...elements].forEach((element) => {
       let isExpanded = false;
       const triggerElement = element.firstElementChild as HTMLElement;
-      const targetElement = element.nextElementSibling as HTMLElement;
+      const targetElement = triggerElement.nextElementSibling as HTMLElement;
 
       if (!targetElement) throw new Error('There is a problem with the HTML structure.');
 
       const dimension = targetElement.scrollHeight;
       const duration = dimension * speed;
       (element as HTMLElement).style.overflow = 'hidden';
+      targetElement.style.height = '0';
       targetElement.style.transitionDuration = `${duration}ms`;
       targetElement.style.transitionTimingFunction = easing;
 
@@ -32,4 +32,4 @@ const jabra: (options: Options) => void = ({ selector, speed = 1.5, easing = 'ea
   }
 };
 
-export default jabra;
+export default Jabra;
