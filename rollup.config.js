@@ -6,6 +6,9 @@ import pkg from './package.json';
 
 const moduleName = pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1);
 const inputFilePath = 'src/index.ts';
+const extensions = [
+  '.js', '.jsx', '.ts', '.tsx',
+];
 const banner = `
 /**
  * @license
@@ -41,6 +44,7 @@ export default [
       pluginBabel({
         babelHelpers: 'bundled',
         configFile: path.resolve(__dirname, '.babelrc.js'),
+        extensions,
       }),
     ],
   },
@@ -64,6 +68,7 @@ export default [
       pluginBabel({
         babelHelpers: 'bundled',
         configFile: path.resolve(__dirname, '.babelrc.js'),
+        extensions,
       }),
     ],
   },
