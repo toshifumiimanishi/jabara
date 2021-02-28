@@ -1,6 +1,6 @@
 {
   "name": "jabara",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🐍 Jabara.js is the collapse JavaScript plugin.",
   "main": "dist/jabara.js",
   "module": "dist/jabara.es.js",
